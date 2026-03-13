@@ -28,3 +28,61 @@ document.addEventListener('DOMContentLoaded', () => {
         revealOnScroll.observe(el);
     });
 });
+// Science of Simple Animation
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('process-track');
+    if (!track) return;
+
+    const cards = document.querySelectorAll('.process-card');
+    const progressBar = document.getElementById('progress-bar');
+    let currentStep = 0;
+    let isPaused = false;
+    const intervalTime = 1.8; // seconds
+
+    const tl = gsap.timeline({
+        repeat: -1,
+        onUpdate: () => {
+            if (isPaused) {
+                tl.pause();
+            }
+        }
+    });
+
+    cards.forEach((card, index) => {
+        // Animation for each step
+        tl.to(progressBar, {
+            width: `${(index + 1) * 25}%`,
+            duration: intervalTime,
+            ease: "none",
+            onStart: () => {
+                cards.forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+            }
+        });
+    });
+
+    // Hover to pause functionality (only if hovering over active card)
+    cards.forEach((card) => {
+        card.addEventListener('mouseenter', () => {
+            if (card.classList.contains('active')) {
+                tl.pause();
+            }
+        });
+        card.addEventListener('mouseleave', () => {
+            tl.play();
+        });
+    });
+
+    // Intersection Observer to start animation when visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                tl.play();
+            } else {
+                tl.pause();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(track);
+});

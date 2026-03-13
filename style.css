@@ -296,3 +296,100 @@ img {
     margin-bottom: 1rem;
     display: block;
 }
+/* Process Animation */
+.process-track {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 4rem;
+}
+
+.track-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.process-card {
+    background: var(--color-bg-primary);
+    padding: 3rem 2rem;
+    border-radius: 4px;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0.5;
+    transform: translateY(20px);
+}
+
+.process-card.active {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.process-card .step-icon {
+    margin-bottom: 2rem;
+    color: var(--color-secondary);
+    transition: transform 0.5s ease;
+}
+
+.process-card.active .step-icon {
+    transform: scale(1.1);
+}
+
+.process-card .step-num {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.process-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.process-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
+.progress-container {
+    height: 4px;
+    background: var(--color-accent);
+    margin-top: 4rem;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--color-secondary);
+    width: 0%;
+}
+
+/* Responsive Process */
+@media (max-width: 900px) {
+    .track-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FAQ Accordion Styles */
+.policy-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.policy-content li {
+    margin-bottom: 0.8rem;
+}
