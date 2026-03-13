@@ -1,0 +1,4 @@
+.DS_Store
+*.webp
+.system_generated/
+tmp/

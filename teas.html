@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Teas - Maayah Tea | Artisanal Microbatch Assam Tea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        .product-card {
+            background: var(--color-bg-secondary);
+            padding: 2rem;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-color: var(--color-secondary);
+        }
+        .product-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 2rem;
+        }
+        .price {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--color-secondary);
+            margin: 1rem 0;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="nav-bar">
+        <div class="container flex" style="justify-content: space-between; align-items: center;">
+            <a href="index.html" class="logo">Maayah Tea</a>
+            <nav>
+                <ul class="nav-links flex">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="teas.html" class="nav-link">Teas</a></li>
+                    <li><a href="tea-club.html" class="nav-link">Tea Club</a></li>
+                    <li><a href="tour.html" class="nav-link">Assam Tea Tour</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div style="background-color: var(--color-primary); color: white; padding: 12rem 0 4rem; text-align: center;">
+            <div class="container reveal-instant">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 0 4px 10px rgba(0,0,0,0.2);">The Collection</h1>
+                <p style="opacity: 0.8; max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Limited edition microbatches, hand-refined in the heart of Assam.</p>
+            </div>
+        </div>
+
+        <section class="section-padding container">
+            <div class="product-grid">
+                <!-- Black Tea -->
+                <div class="product-card">
+                    <img src="artisanal_black_tea_leaves_macro_1773353566880.png" alt="Handcraft Black Tea" class="product-img">
+                    <h3>Handcraft Black Tea</h3>
+                    <p class="price"><span class="old-price">₹349.00</span>₹310.00</p>
+                    <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 2rem;">Bold, robust, and rich in antioxidants. A classic Assam experience.</p>
+                    <a href="black-tea.html" class="btn-premium" style="padding: 0.8rem 2rem; font-size: 0.7rem;">View Details</a>
+                </div>
+
+                <!-- Green Tea -->
+                <div class="product-card">
+                    <img src="artisanal_green_tea_leaves_macro_1773353579332.png" alt="Handcraft Green Tea" class="product-img">
+                    <h3>Handcraft Green Tea</h3>
+                    <p class="price"><span class="old-price">₹449.00</span>₹404.00</p>
+                    <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 2rem;">Delicate and detoxifying. Calmness in every hand-rolled leaf.</p>
+                    <a href="green-tea.html" class="btn-premium" style="padding: 0.8rem 2rem; font-size: 0.7rem;">View Details</a>
+                </div>
+
+                <!-- Combo -->
+                <div class="product-card reveal">
+                    <div style="position: relative; height: 300px; margin-bottom: 2rem; display: flex; align-items: center; justify-content: center;">
+                         <img src="artisanal_black_tea_leaves_macro_1773353566880.png" alt="Combo" class="product-img" style="width: 50%; transform: translateX(15%) rotate(-5deg); z-index: 1; border: 8px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                         <img src="artisanal_green_tea_leaves_macro_1773353579332.png" alt="Combo" class="product-img" style="width: 50%; transform: translateX(-15%) rotate(5deg); border: 8px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    </div>
+                    <h3>The Ritual Combo</h3>
+                    <p class="price"><span class="old-price">₹799.00</span>₹699.00</p>
+                    <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 2rem;">The complete Maayah experience. Both premium blends in one pack.</p>
+                    <a href="combo.html" class="btn-premium" style="padding: 1rem 2.5rem; font-size: 0.75rem;">View Details</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background-color: var(--color-primary); color: white; padding: var(--spacing-lg) 0;">
+        <div class="container grid" style="grid-template-columns: 2fr 1fr 1fr; gap: 4rem;">
+            <div>
+                <h3 class="logo" style="color: white; margin-bottom: 1.5rem;">Maayah Tea</h3>
+                <p style="opacity: 0.8; max-width: 300px;">Makro Enterprise. Crafting Assam's best through patience, tradition, and a commitment to microbatch quality.</p>
+                <p style="opacity: 0.8; margin-top: 1rem; font-size: 0.9rem;">+91 8099591429 | hello@maayahtea.com</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem;">Quick Links</h4>
+                <ul style="opacity: 0.8;">
+                    <li style="margin-bottom: 0.5rem;"><a href="index.html">Home</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="teas.html">Shop Teas</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="tea-club.html">Tea Club</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="tour.html">Tea Tour</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem;">Legal</h4>
+                <div class="flex" style="flex-direction: column; gap: 0.5rem; opacity: 0.8;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Shipping & Returns</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem; padding-top: 2rem; text-align: center; opacity: 0.6; font-size: 0.8rem;">
+            © 2026 Maayah Tea. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
